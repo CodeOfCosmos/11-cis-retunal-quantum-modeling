@@ -8,7 +8,7 @@ burn_in = 40000
 
 # Quantum numbers config
 qn_ground = np.array([1, 2, 3, 4, 5, 6])
-qn_excited = np.array([1, 2, 3, 4, 5, 7]) # Last electron jumps 6 -> 7
+qn_excited = np.array([1, 2, 3, 4, 5, 7]) # last electron jumps 6 -> 7
 
 def single_particle_psi(n, x):
     return np.sqrt(2.0 / L) * np.sin(n * np.pi * x / L)
