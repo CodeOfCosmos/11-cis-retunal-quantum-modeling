@@ -71,7 +71,7 @@ x_grid = np.linspace(0, L, 600)
 ax1.hist(coords_before, bins=90, range=(0, L), density=True, color='teal', alpha=0.6, edgecolor='darkslategrey')
 theory_before = (sum(single_particle_psi(n, x_grid)**2 for n in qn_ground) * 2) / 12.0
 ax1.plot(x_grid, theory_before, color='darkorange', linewidth=2.5, label='Analytical Ground State')
-ax1.set_title('Before Light Hit (Ground State: All $n \leq 6$)', fontsize=12)
+ax1.set_title('Before Light interaction (Ground State: All $n \leq 6$)', fontsize=12)
 ax1.set_xlabel('Box Position (x)')
 ax1.set_ylabel('Relative Probability Density')
 ax1.grid(True, alpha=0.3)
@@ -82,7 +82,7 @@ ax2.hist(coords_after, bins=90, range=(0, L), density=True, color='crimson', alp
 theory_after = (sum(single_particle_psi(n, x_grid)**2 for n in qn_ground) + 
                 sum(single_particle_psi(n, x_grid)**2 for n in qn_excited)) / 12.0
 ax2.plot(x_grid, theory_after, color='blue', linewidth=2.5, label='Analytical Excited State')
-ax2.set_title('After Light Hit (Excited State: One Electron to $n=7$)', fontsize=12)
+ax2.set_title('After interaction with light (Excited State: One Electron to $n=7$)', fontsize=12)
 ax2.set_xlabel('Box Position (x)')
 ax2.grid(True, alpha=0.3)
 ax2.legend()
